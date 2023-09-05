@@ -1,0 +1,35 @@
+@import "../global";
+
+.why__choose-us-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+        @include title
+    }
+
+    .read__box {
+        padding: 1rem;
+        border: gray;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        .read__more {
+            text-align: right;
+            a {
+
+                color: $red;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .why__choose-us-section {
+        .title {
+            text-align: center;
+        }
+    }
+}

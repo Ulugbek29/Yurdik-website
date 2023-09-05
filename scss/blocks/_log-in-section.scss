@@ -1,0 +1,41 @@
+@import "../global";
+
+.log-in__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+        @include title
+    }
+
+    form {
+        width: 80%;
+        .search__input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 2rem;
+            color: grey;
+            font-size: 1rem;
+            border: 1px solid grey;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .log-in__section {
+        form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:480px) { 
+    .log-in__section {
+        .title {
+            text-align: center;
+        }
+    }
+}

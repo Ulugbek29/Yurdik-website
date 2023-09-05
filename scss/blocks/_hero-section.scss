@@ -1,0 +1,121 @@
+@import "../global";
+
+.hero__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: url(../../images/3d-rendering-business-meeting-and-working-room-on-office-building\ 1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.8);
+        
+    }
+    .hero__text {
+        flex: 0.8;z-index: 1;
+        .hero__title {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .btn {
+            @include btn;
+            margin: 1rem 0 5rem 0;
+        }
+
+        .browsers {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    .hero__img {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex: 1;
+        z-index: 1;
+        img {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero__section {
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        .hero__text {
+            width: 60%;
+            .hero__title {
+                width: 300px;
+                width: fit-content;
+                font-size: 2.7rem;
+                margin-bottom: 2rem;
+            }
+
+            .browsers {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        .hero__img {
+            width: 40%;
+            img {
+                width: 100%;
+                object-fit: cover;
+                margin-right: -50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero__section {
+        overflow: visible;
+        .hero__text {
+            display: flex;
+            align-items:flex-start;
+            flex-direction: column;
+            justify-content: center;
+            .hero__title {
+                font-size: 1.8rem;
+            }
+            .btn {
+                display: none;
+            }
+            .browsers {
+                flex-direction: column;
+                gap: 0.5rem;
+                img {
+                    width: 80px;
+                }
+            }
+        }
+
+        .hero__img {
+            margin-right: 0;
+            img {
+                width: 200px;
+            }
+            .btn {
+                @include btn;
+                display: block;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,117 @@
+@import "../global";
+
+.header__nav{
+    position: fixed;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    padding: 0 10%;
+    z-index: 100;
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    .nav__link {
+        text-align: center;
+        .menu__icon {
+            i{
+                padding: 0.5rem;
+                border: 1px solid;
+                border-radius: 50%;
+            }
+        }
+
+        a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+            .logo img {
+                width: 200px;
+            }
+        }
+
+        .phone__number {
+            color: $red;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .location__text {
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .socials {
+            .socials__icons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                i {
+                    font-size: 1.8rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                margin-top: 0.2rem;
+            }
+
+        }
+    }
+
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .header__nav {
+        .nav__list {
+            .nav__link {
+
+                a {
+                .logo img {
+                    width: 150px;
+                }}
+
+            }
+            .disable {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .header__nav {
+        padding: 0 5%;
+        .nav__list {
+
+            .nav__link {
+                a .logo img {
+                    width: 140px;
+                }
+
+                .phone__number {
+                    font-size: 1.4rem;
+                }
+                .location__text {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .menu__disable {
+                display: none;
+            }
+
+            .socials__disable {
+                display: none;
+            }
+        }   
+    }
+}

@@ -1,0 +1,66 @@
+@import "../global";
+
+.map__section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: url(../../images/map.png) no-repeat;
+    background-size: 700px;
+    background-position: 80% center;
+    .map__text {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        .title {
+            @include title
+        }
+
+        .map__list {
+            width: 70%;
+            @include phone__list
+        }
+
+        .office__location {
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            .offices__link {
+                color: $red;
+                text-decoration: underline;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .map__section {
+        flex-direction: column;
+        justify-content: start;
+
+        height: 700px;
+    background-size: 600px;
+        background-position: center 100%;
+
+        .map__text {
+            width: 100%;
+            .title {
+                text-align: center;
+            }
+
+             .map__list  {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map__section {
+        background-size: 450px;
+    }
+}

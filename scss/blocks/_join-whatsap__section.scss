@@ -1,0 +1,33 @@
+@import "../global";
+
+.join__whatsap-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background: $grey;
+
+    .title {
+        @include title;
+        text-align: center;
+        a {
+            text-decoration: underline;
+            color: $red
+        }
+    }
+
+    .btn {
+        @include btn;
+        background: #48C95F;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .join__whatsap-section  {
+        .btn {
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+        }
+    }
+}

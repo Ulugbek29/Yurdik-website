@@ -1,0 +1,67 @@
+@import "../global";
+
+.book__section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: $grey;
+
+    .book__info {
+        flex: 2;
+        .title {
+            @include title
+        }
+
+        .book__list {
+            @include phone__list
+        }
+    }
+
+    .book__user {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        .btn {
+            @include btn;
+            width: 80%;
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .book__section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        .book__info {
+            .title {
+                text-align: center;
+            }
+        }
+
+        .book__user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .book__user-profile {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {  
+    .book__section {
+        .book__user {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

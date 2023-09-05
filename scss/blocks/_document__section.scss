@@ -1,0 +1,49 @@
+@import "../global";
+
+.document__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .document__info {
+        flex: 1;
+
+        .title {
+            @include title;
+            a {
+                color:$red
+            }
+        }
+    }
+
+    .document__img {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width:768px)  {
+    .document__section {
+        .document__img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .document__section {
+        flex-direction: column;
+        align-items: center;
+        .document__info {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+} 
